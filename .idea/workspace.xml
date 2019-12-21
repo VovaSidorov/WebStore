@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe92d6c-3b0e-4328-8041-5a8329a549b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/Components/Main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Header/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/lib/BuilderHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lib/BuilderHtml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/lib/FactoryHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lib/FactoryHtml.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
       <workItem from="1576875024228" duration="9000" />
       <workItem from="1576937202667" duration="1556000" />
       <workItem from="1576941570252" duration="8396000" />
-      <workItem from="1576958991675" duration="487000" />
+      <workItem from="1576958991675" duration="1729000" />
     </task>
     <servers />
   </component>
