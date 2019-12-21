@@ -1,9 +1,12 @@
-import createHtmlObject from "../../lib/FactoryHtml";
+import getHtmlObject from "../../lib/FactoryHtml";
+import navbarBrand from "./navbarBrand";
+import navbarCollapse from "./navbarCollapse";
+import navbarToggler from "./navbarToggler";
 
-export default function () {
-    const div = createHtmlObject('div');
+export default function Header() {
+    const nav =getHtmlObject('nav');
 
-    const header = document.createElement("div");
-    header.innerText ="header";
-return header;
+    return nav.createHtmlElement("navbar navbar-expand-lg navbar-dark bg-dark",
+        null,
+        [navbarBrand,navbarToggler,navbarCollapse]);
 }

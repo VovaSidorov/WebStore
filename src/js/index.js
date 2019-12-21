@@ -1,8 +1,8 @@
 console.log("App was load ...");
 import render from './lib/renderHtml';
-import Header from './Components/Header/';
+import _header from './Components/Header/';
 
-console.log(Header());
+const header = _header();
 
 // import createHtmlObject from "./lib/FactoryHtml";
 
@@ -22,4 +22,4 @@ console.log(Header());
 // const  row = div.crateHtmlElement("row",null,[col]);
 // const  container = div.crateHtmlElement('container',null, [row]);
 
-render("app", Header());
+render("app", header);

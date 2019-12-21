@@ -1,7 +1,6 @@
 export default function BuilderHtml(tag) {
 
-   this.crateHtmlElement = (className, attr, content) => {
-      console.log("Builder >>>");
+   this.createHtmlElement = (className, attr, content) => {
       const html = document.createElement(tag);
 
          html.className = className || "";
