@@ -1,6 +1,6 @@
 import BuilderHtml from "./BuilderHtml";
 
-export default function Img() {
-    const tag = 'img';
+export default function H5() {
+    const tag = 'h5';
     BuilderHtml.call(this, tag);
 }

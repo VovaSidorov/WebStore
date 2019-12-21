@@ -6,7 +6,8 @@ import Button from "./Button";
 import Nav from "./Nav";
 import Li from "./Li";
 import Ul from "./Ul";
-import Span from "./Span"
+import Span from "./Span";
+import H5 from "./H5"
 
 export default function (tag) {
     switch (tag) {
@@ -26,6 +27,8 @@ export default function (tag) {
             return new Span();
         case "ul":
             return new Ul();
+        case "h5":
+            return new H5();
         default:
             return new Div();
     }
