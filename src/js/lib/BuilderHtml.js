@@ -8,7 +8,7 @@ export default function BuilderHtml(tag) {
             attr.map(el=>html.setAttribute(el.name, el.value))
          }
          if (typeof content === "string"){
-            html.innerText = content;
+            html.innerHTML = content;
          }else if (Array.isArray(content)){
             content.map(el=>(el instanceof Node?html.appendChild(el):""))
          }

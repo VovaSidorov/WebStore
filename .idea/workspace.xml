@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe92d6c-3b0e-4328-8041-5a8329a549b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/js/Components/Header/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/Components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Components/Card/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Card/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/Components/Header/navbarCollapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Header/navbarCollapse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/lib/BuilderHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lib/BuilderHtml.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,7 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Sass File" />
       </list>
     </option>
   </component>
@@ -37,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="ServiceViewManager">
@@ -73,6 +75,7 @@
       <workItem from="1577009382968" duration="2751000" />
       <workItem from="1577026979419" duration="922000" />
       <workItem from="1577029488668" duration="4867000" />
+      <workItem from="1577041596833" duration="742000" />
     </task>
     <servers />
   </component>
@@ -84,7 +87,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -99,21 +104,31 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1576448126983" />
-    <state width="1276" height="175" key="GridCell.Tab.0.bottom" timestamp="1576623730454">
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom" timestamp="1577041028972">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1276" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1576623730454" />
-    <state width="1276" height="175" key="GridCell.Tab.0.center" timestamp="1576623730454">
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1577041028972" />
+    <state width="1276" height="175" key="GridCell.Tab.0.center" timestamp="1577041028972">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1276" height="175" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1576623730454" />
-    <state width="1276" height="175" key="GridCell.Tab.0.left" timestamp="1576623730454">
+    <state width="1276" height="175" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1577041028972" />
+    <state width="1276" height="175" key="GridCell.Tab.0.left" timestamp="1577041028971">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1276" height="175" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1576623730454" />
-    <state width="1276" height="175" key="GridCell.Tab.0.right" timestamp="1576623730454">
+    <state width="1276" height="175" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1577041028971" />
+    <state width="1276" height="175" key="GridCell.Tab.0.right" timestamp="1577041028972">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1276" height="175" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1576623730454" />
+    <state width="1276" height="175" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1680.1050@67.27.1299.741" timestamp="1577041028972" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/Components/Card/index.js</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

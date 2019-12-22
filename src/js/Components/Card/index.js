@@ -30,8 +30,12 @@ const createCardElement = (product) => {
     );
 
     const cardLink = a.createHtmlElement(
-        "btn btn-primary",
-        null,
+        "btn btn-primary add_to_cart",
+        [
+            {name:"data-id", value: id},
+            {name:"data-price", value: price},
+            {name:"data-title", value: title},
+        ],
         "Add to cart"
     );
 
