@@ -1,16 +1,7 @@
 import getHtmlObject from "../../lib/FactoryHtml";
+import products from "../../products";
 
-const _product = {
-    title: "Nike super sport 123",
-    description: "Some text about Nike super sport 123",
-    image: "images/shoes01.jpg"
-};
-
-const products = [
-    {..._product, image: "images/shoes01.jpg"},
-    {..._product, image: "images/shoes02.jpg"},
-    {..._product, image: "images/shoes03.jpg"},
-];
+const limit = 100;
 
 const div = getHtmlObject("div");
 const img = getHtmlObject("img");
@@ -19,11 +10,14 @@ const a = getHtmlObject("a");
 const h5 = getHtmlObject("h5");
 
 const createCardElement = (product) => {
+
+    const {title,description,image}=product;
+
     const cardImgTop = img.createHtmlElement(
         "card-img-top",
         [
-            {name: "src", value: product.image},
-            {name: "alt", value: product.title},
+            {name: "src", value: image},
+            {name: "alt", value: product},
         ]
     );
     const cardLink = a.createHtmlElement(
@@ -34,12 +28,12 @@ const createCardElement = (product) => {
     const cardText = p.createHtmlElement(
         "card-text",
         null,
-        product.description
+        ((description[limit+1] === " ")?description.substring(0,limit):description.substring(0,limit).split(" ").slice(0,-1).join(" ")) + "..."
     );
     const cardTitle = h5.createHtmlElement(
         "card-title",
         null,
-        product.title
+        title
     );
     const cardBody = div.createHtmlElement(
         "card-body",
@@ -53,12 +47,14 @@ const createCardElement = (product) => {
         [cardImgTop,cardBody]
     );
     return div.createHtmlElement(
-        "col-4",
+        "col-12 col-md-4 col-lg-3 my-2",
         null,
         [card]
     );
 };
 
+products.map(el=>createCardElement(el));
 
 
-export default createCardElement(products[0]);
+
+export default products.map(el=>createCardElement(el));

@@ -8,9 +8,9 @@ export default function main() {
     const x = element;
 
     const row = div.createHtmlElement(
-        "row",
+        "row my-5",
         null,
-        [element]
+        element
     );
 
     return div.createHtmlElement(
