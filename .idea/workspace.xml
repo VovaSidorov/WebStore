@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe92d6c-3b0e-4328-8041-5a8329a549b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/Components/Header/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/actions/addToCart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Components/Header/navbarCollapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Header/navbarCollapse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/lib/BuilderHtml.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/lib/BuilderHtml.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +15,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Sass File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,7 +72,7 @@
       <workItem from="1577009382968" duration="2751000" />
       <workItem from="1577026979419" duration="922000" />
       <workItem from="1577029488668" duration="4867000" />
-      <workItem from="1577041596833" duration="742000" />
+      <workItem from="1577041596833" duration="1846000" />
     </task>
     <servers />
   </component>

@@ -2,10 +2,12 @@ console.log("App was load ...");
 import render from './lib/renderHtml';
 import _header from './Components/Header/';
 import _main from './Components/Main/';
+import addToCartAction from "./actions/addToCartAction";
 
 const header = _header();
 const main = _main();
-const addToCart = new Event("addToCart");
+
+const addToCartEvent = new Event("addToCart");
 
 document.addEventListener("addToCart", () => {
     console.log("Detected addToCart");
@@ -27,20 +29,17 @@ if(
 [...document.getElementsByClassName("nav-item")]
     .map(el => el.addEventListener("click", () => console.log("nav-item")));
 
-[...document.getElementsByClassName("add_to_cart")]
-    .map(el => el.addEventListener("click", (e) => {
-        console.log("Add");
+addToCartAction(addToCartEvent);
 
-        let cart = JSON.parse(localStorage.getItem("cart"));
 
-        cart.push({
-            id: e.target.dataset.id,
-            price: e.target.dataset.price,
-            title: e.target.dataset.title,
-        });
 
-        localStorage.setItem("cart",JSON.stringify(cart));
 
-        document.dispatchEvent(addToCart);
-    }));
+
+
+
+
+
+
+
+
 
