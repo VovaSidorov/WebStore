@@ -14,6 +14,8 @@ const navLinks = [
             {name: "href", value: "/"},
             {name: "id", value: "cart_nav"},
             {name: "class", value: "nav-link d-flex align-items-center"},
+            {name: "data-toggle", value: "modal"},
+            {name: "data-target", value: "#modalCart"},
         ]},
     {name: "Contact", attr: [{name: "href", value: "/"}]},
 ];
