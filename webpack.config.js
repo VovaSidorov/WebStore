@@ -12,18 +12,18 @@ module.exports = {
 		port: 3000
 
 	},
-	// module: {
-	// 	rules: [
-	// 		{
-	// 			test: /\.(scss|css)$/,
-	// 			use: [
-	// 				"style-loader",
-	// 				"css-loader",
-	// 				"sass-loader"
-	// 			]
-	// 		}
-	// 	]
-	// },
+	module: {
+		rules: [
+			{
+				test: /\.(scss|css)$/,
+				use: [
+					"style-loader",
+					"css-loader",
+					"sass-loader"
+				]
+			}
+		]
+	}
 	// pplugins: [
 	// 	new ExtractTextPlugin("styles.css"),
 	// ]
