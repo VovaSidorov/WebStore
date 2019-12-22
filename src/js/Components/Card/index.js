@@ -9,10 +9,11 @@ const img = getHtmlObject("img");
 const p = getHtmlObject("p");
 const a = getHtmlObject("a");
 const h5 = getHtmlObject("h5");
+const span = getHtmlObject("span");
 
 const createCardElement = (product) => {
 
-    const {title,description,image}=product;
+    const {id,price,title,description,image}=product;
 
     const cardImgTop = img.createHtmlElement(
         "card-img-top",
@@ -21,11 +22,26 @@ const createCardElement = (product) => {
             {name: "alt", value: product},
         ]
     );
+
+    const priceSpan = span.createHtmlElement(
+        "card-price",
+        null,
+        `${price} $`
+    );
+
     const cardLink = a.createHtmlElement(
         "btn btn-primary",
         null,
         "Add to cart"
     );
+
+    const actionSection = div.createHtmlElement(
+        "card-action d-flex justify-content-between align-items-center",
+        null,
+        [priceSpan,cardLink]
+    );
+
+
     const cardText = p.createHtmlElement(
         "card-text",
         null,
@@ -39,7 +55,7 @@ const createCardElement = (product) => {
     const cardBody = div.createHtmlElement(
         "card-body",
         null,
-        [cardTitle,cardText,cardLink]
+        [cardTitle,cardText,actionSection]
     );
 
     const card = div.createHtmlElement(

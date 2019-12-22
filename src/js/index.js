@@ -9,3 +9,4 @@ const main = _main();
 
 render("app", header);
 render("app", main);
+

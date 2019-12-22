@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="abe92d6c-3b0e-4328-8041-5a8329a549b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Components/Header/navbarCollapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Header/navbarCollapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/Components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/Components/Card/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/Components/Card/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/products.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +72,23 @@
       <workItem from="1576958991675" duration="7087000" />
       <workItem from="1577009382968" duration="2751000" />
       <workItem from="1577026979419" duration="922000" />
-      <workItem from="1577029488668" duration="2742000" />
+      <workItem from="1577029488668" duration="4867000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="201" width="556" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576616026179">
