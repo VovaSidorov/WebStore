@@ -49,6 +49,12 @@ document.getElementById("cart_nav")
         }
     });
 
+document.getElementById("closeModal")
+    .addEventListener("click",()=>{
+        console.log("closeModal");
+        document.getElementById("modal-content-section").innerHTML = "";
+    });
+
 
 
 

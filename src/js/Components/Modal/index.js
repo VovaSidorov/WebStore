@@ -8,7 +8,10 @@ const span = getHtmlObject("span");
 
 const spanClose = span.createHtmlElement(
     null,
-    [{name:"aria-hidden", value:"true"}],
+    [
+        {name:"class", value:"true"},
+        {name:"id", value:"closeModal"}
+        ],
     "&times;"
 );
 
