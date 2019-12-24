@@ -6,6 +6,8 @@ import modal from './Components/Modal';
 
 import addToCartAction from "./actions/addToCartAction";
 
+import createCardList from './Components/CardItemsList'
+
 const header = _header();
 const main = _main();
 
@@ -33,6 +35,19 @@ if(
     .map(el => el.addEventListener("click", () => console.log("nav-item")));
 
 addToCartAction(addToCartEvent);
+
+document.getElementById("cart_nav")
+    .addEventListener("click",()=>{
+
+        if(
+            localStorage.getItem("cart")&&
+            Array.isArray(JSON.parse(localStorage.getItem("cart")))
+        ){
+            const cardItems = JSON.parse(localStorage.getItem("cart"));
+            console.log(createCardList(cardItems));
+
+        }
+    });
 
 
 

@@ -1,4 +1,4 @@
-export  default function (place,html) {
+export default (place, Html) => {
     const element = document.getElementById(place);
-    element.appendChild(html);
+    element.appendChild(Html);
 }

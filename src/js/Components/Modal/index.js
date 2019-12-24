@@ -37,7 +37,7 @@ const modalHeader = div.createHtmlElement(
 
 const modalContentSection = div.createHtmlElement(
     "modal-content-section",
-    null,
+    [{name:"id", value:"modal-content-section"}],
     ""
 );
 
