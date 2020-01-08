@@ -24,21 +24,28 @@ const createItemRow = ({title,price}) => {
 };
 
 export default (list) => {
-    console.log(list);
+    let liList = [];
 
-    const liList = list.map(el => {
+    liList.push(li.createHtmlElement(
+        "card-item-element font-weight-bold",
+        null,
+        [createItemRow({title: "Product name", price:"Price"})]
+    ));
+
+    liList = liList.concat(list.map(el => {
 
         return li.createHtmlElement(
             "card-item-element",
             null,
             [createItemRow(el)]
         )
-    });
+    }));
 
-    liList.unshift(li.createHtmlElement(
+    const total =list.reduce((acc, el) => acc + Number(el.price), 0);
+    liList.push(li.createHtmlElement(
         "card-item-element font-weight-bold",
         null,
-        [createItemRow({title: "Product name", price:"Price"})]
+        [createItemRow({title: "Total", price:`${total} $`})]
     ));
 
     const cardProductList = ul.createHtmlElement(
