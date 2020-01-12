@@ -5,8 +5,10 @@ import _main from './Components/Main/';
 import modal from './Components/Modal';
 
 import addToCartAction from "./actions/addToCartAction";
+import showCardModalAction from "./actions/showCardModalAction";
+import clearModalAction from "./actions/clearModalAction";
+import initCardAction from "./actions/initCardAction";
 
-import createCardList from './Components/CardItemsList'
 
 const header = _header();
 const main = _main();
@@ -24,38 +26,11 @@ render("app", header);
 render("app", main);
 render("app", modal);
 
-if(
-    !localStorage.getItem("cart") ||
-    !Array.isArray(JSON.parse(localStorage.getItem("cart")))
-){
-    localStorage.setItem("cart",JSON.stringify([]));
-}
 
-[...document.getElementsByClassName("nav-item")]
-    .map(el => el.addEventListener("click", () => console.log("nav-item")));
-
+initCardAction();
 addToCartAction(addToCartEvent);
-
-document.getElementById("cart_nav")
-    .addEventListener("click",()=>{
-
-        if(
-            localStorage.getItem("cart")&&
-            Array.isArray(JSON.parse(localStorage.getItem("cart")))
-        ){
-            const cardItems = JSON.parse(localStorage.getItem("cart"));
-            console.log(createCardList(cardItems));
-
-        }
-    });
-
-document.getElementById("closeModal")
-    .addEventListener("click",()=>{
-        console.log("closeModal");
-        document.getElementById("modal-content-section").innerHTML = "";
-    });
-
-
+showCardModalAction();
+clearModalAction();
 
 
 
