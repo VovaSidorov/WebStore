@@ -9,8 +9,8 @@ export default function main() {
 
     const row = div.createHtmlElement(
         "row my-5",
-        null,
-        element
+        [{name:"id",value:"catalog"}],
+        "No products yet. Please wait"
     );
 
     return div.createHtmlElement(

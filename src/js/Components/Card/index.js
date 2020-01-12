@@ -1,5 +1,4 @@
 import getHtmlObject from "../../lib/FactoryHtml";
-import products from "../../products";
 import './style.scss';
 
 const limit = 100;
@@ -74,8 +73,4 @@ const createCardElement = (product) => {
     );
 };
 
-products.map(el=>createCardElement(el));
-
-
-
-export default products.map(el=>createCardElement(el));
+export default createCardElement;

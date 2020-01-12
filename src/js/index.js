@@ -3,12 +3,14 @@ import render from './lib/renderHtml';
 import _header from './Components/Header/';
 import _main from './Components/Main/';
 import modal from './Components/Modal';
+import createCardElement from './Components/Card'
 
 import addToCartAction from "./actions/addToCartAction";
 import showCardModalAction from "./actions/showCardModalAction";
 import clearModalAction from "./actions/clearModalAction";
 import initCardAction from "./actions/initCardAction";
 
+import dataProducts from "./products";
 
 const header = _header();
 const main = _main();
@@ -26,11 +28,16 @@ render("app", header);
 render("app", main);
 render("app", modal);
 
-
 initCardAction();
-addToCartAction(addToCartEvent);
 showCardModalAction();
 clearModalAction();
+
+setTimeout(()=>{
+    const {products} = dataProducts;
+    document.getElementById('catalog').innerText = "";
+    products.map(el=>render('catalog',createCardElement(el)));
+    addToCartAction(addToCartEvent);
+},3000);
 
 
 
