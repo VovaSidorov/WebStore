@@ -32,12 +32,15 @@ initCardAction();
 showCardModalAction();
 clearModalAction();
 
-setTimeout(()=>{
-    const {products} = dataProducts;
-    document.getElementById('catalog').innerText = "";
-    products.map(el=>render('catalog',createCardElement(el)));
-    addToCartAction(addToCartEvent);
-},3000);
+fetch("https://zloyleva.github.io/js_40_8/src/js/products.json")
+    .then(res => res.json())
+    .then(response =>{
+        const {products} = response;
+        document.getElementById('catalog').innerText = "";
+        products.map(el=>render('catalog',createCardElement(el)));
+        addToCartAction(addToCartEvent);
+    })
+.catch(err => console.log(err));
 
 
 
