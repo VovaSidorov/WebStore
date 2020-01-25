@@ -9,8 +9,7 @@ import addToCartAction from "./actions/addToCartAction";
 import showCardModalAction from "./actions/showCardModalAction";
 import clearModalAction from "./actions/clearModalAction";
 import initCardAction from "./actions/initCardAction";
-
-import dataProducts from "./products";
+import fetchProducts from './actions/fetchProducts';
 
 const header = _header();
 const main = _main();
@@ -32,16 +31,16 @@ initCardAction();
 showCardModalAction();
 clearModalAction();
 
-fetch("https://zloyleva.github.io/js_40_8/src/js/products.json")
-    .then(res => res.json())
-    .then(response =>{
-        const {products} = response;
-        document.getElementById('catalog').innerText = "";
-        products.map(el=>render('catalog',createCardElement(el)));
+const urlSearch = location.search;
+
+fetchProducts(urlSearch, 6)
+    .then(data =>{
+        const {products} = data;
+        document.getElementById("catalog").innerText = "";
+        products.map(el => render("catalog", createCardElement(el)));
         addToCartAction(addToCartEvent);
     })
-.catch(err => console.log(err));
-
+    .catch(err => console.log(err));
 
 
 
