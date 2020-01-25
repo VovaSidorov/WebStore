@@ -11,6 +11,8 @@ import clearModalAction from "./actions/clearModalAction";
 import initCardAction from "./actions/initCardAction";
 import fetchProducts from './actions/fetchProducts';
 
+import pagination from './Components/Pagination';
+
 const header = _header();
 const main = _main();
 
@@ -39,6 +41,7 @@ fetchProducts(urlSearch, 6)
         document.getElementById("catalog").innerText = "";
         products.map(el => render("catalog", createCardElement(el)));
         addToCartAction(addToCartEvent);
+        render("app", pagination());
     })
     .catch(err => console.log(err));
 
