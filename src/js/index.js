@@ -42,7 +42,7 @@ fetchProducts(urlSearch, 6)
         document.getElementById("catalog").innerText = "";
         products.map(el => render("catalog", createCardElement(el)));
         addToCartAction(addToCartEvent);
-        render("pagination", pagination(currentPage));
+        render("pagination", pagination(data));
     })
     .catch(err => console.log(err));
 

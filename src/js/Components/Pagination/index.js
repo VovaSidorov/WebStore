@@ -29,7 +29,9 @@ const paginationItemHtml = (linkContent, isDisabeled=false) => {
     );
 };
 
-export default (currentPage) => {
+export default (data) => {
+
+    const {currentPage,total,perPage} = data;
     console.log(currentPage);
 
     let paginationItems = [];
@@ -39,7 +41,7 @@ export default (currentPage) => {
     }
     paginationItems.push(paginationItemHtml(`${currentPage}`, true));
 
-    if(true){
+    if(currentPage*perPage < total){
         paginationItems.push(controlItemHtml("&raquo;"));
     }
 
