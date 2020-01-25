@@ -6,24 +6,24 @@ const li = getHtmlObject("li");
 const a = getHtmlObject("a");
 const span = getHtmlObject("span");
 
-const controlItemHtml = content => {
-    const x = span.createHtmlElement(
+const controlItemHtml = (content, pageNumber) => {
+    const arrow = span.createHtmlElement(
         "",
         [{name: "aria-hidden", value: "true"}],
         content
     );
-    return paginationItemHtml([x]);
+    return paginationItemHtml([arrow], pageNumber);
 };
 
-const paginationItemHtml = (linkContent, isDisabeled=false) => {
+const paginationItemHtml = (linkContent, pageNumber, isDisabled=false) => {
     const pageLink = a.createHtmlElement(
         "page-link",
-        [{name: "href", value: "#"}],
+        [{name: "href", value: `?page=${pageNumber}`}],
         linkContent
     );
 
     return li.createHtmlElement(
-        `page-item ${isDisabeled?"disabled":""}`,
+        `page-item ${isDisabled?"disabled":""}`,
         null,
         [pageLink]
     );
@@ -32,17 +32,15 @@ const paginationItemHtml = (linkContent, isDisabeled=false) => {
 export default (data) => {
 
     const {currentPage,total,perPage} = data;
-    console.log(currentPage);
-
     let paginationItems = [];
 
     if(currentPage !== 1){
-        paginationItems.push(controlItemHtml("&laquo;"));
+        paginationItems.push(controlItemHtml("&laquo;", currentPage - 1));
     }
-    paginationItems.push(paginationItemHtml(`${currentPage}`, true));
+    paginationItems.push(paginationItemHtml(`${currentPage}`,null,true));
 
     if(currentPage*perPage < total){
-        paginationItems.push(controlItemHtml("&raquo;"));
+        paginationItems.push(controlItemHtml("&raquo;", currentPage + 1));
     }
 
     const ulPagination = ul.createHtmlElement(

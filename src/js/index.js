@@ -35,7 +35,7 @@ clearModalAction();
 
 const urlSearch = location.search;
 
-fetchProducts(urlSearch, 6)
+fetchProducts(urlSearch, 4)
     .then(data =>{
         const {products, currentPage} = data;
         console.log(data);
