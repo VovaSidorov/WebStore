@@ -29,12 +29,24 @@ const paginationItemHtml = (linkContent, isDisabeled=false) => {
     );
 };
 
-export default () => {
+export default (currentPage) => {
+    console.log(currentPage);
+
+    let paginationItems = [];
+
+    if(currentPage !== 1){
+        paginationItems.push(controlItemHtml("&laquo;"));
+    }
+    paginationItems.push(paginationItemHtml(`${currentPage}`, true));
+
+    if(true){
+        paginationItems.push(controlItemHtml("&raquo;"));
+    }
 
     const ulPagination = ul.createHtmlElement(
-        "pagination justify-content-center",
+        "pagination",
         null,
-        [controlItemHtml("&laquo;"),paginationItemHtml("2", true),controlItemHtml("&raquo;")]
+        paginationItems
     );
     return nav.createHtmlElement(
         "",

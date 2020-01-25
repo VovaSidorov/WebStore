@@ -37,11 +37,12 @@ const urlSearch = location.search;
 
 fetchProducts(urlSearch, 6)
     .then(data =>{
-        const {products} = data;
+        const {products, currentPage} = data;
+        console.log(data);
         document.getElementById("catalog").innerText = "";
         products.map(el => render("catalog", createCardElement(el)));
         addToCartAction(addToCartEvent);
-        render("app", pagination());
+        render("pagination", pagination(currentPage));
     })
     .catch(err => console.log(err));
 
